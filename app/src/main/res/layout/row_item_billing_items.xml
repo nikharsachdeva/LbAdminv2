@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/item_inventory_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@id/item_inventory_x"
+        android:fontFamily="@font/lexend_regular"
+        android:text="Nikhar"
+        android:textColor="@color/hintColor"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/item_inventory_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:fontFamily="@font/lexend_regular"
+        android:text="x"
+        android:textColor="@color/hintColor"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/item_inventory_qty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toEndOf="@id/item_inventory_x"
+        android:fontFamily="@font/lexend_regular"
+        android:gravity="end"
+        android:text="2"
+        android:textColor="@color/hintColor"
+        android:textSize="12sp" />
+
+    <View
+        android:id="@+id/concern_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/item_inventory_x"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorDashEffect" />
+
+
+</RelativeLayout>

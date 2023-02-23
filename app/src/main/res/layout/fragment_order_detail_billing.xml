@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".ui.order.OrderDetailBillingFragment">
+
+    <ScrollView
+        android:id="@+id/billingAvailable_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lexend_medium"
+                android:text="Items"
+                android:textColor="@color/hintColor"
+                android:textSize="12sp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/billingItems_cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="8dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="2dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/billingItems_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/row_item_billing_items" />
+
+                    <TextView
+                        android:id="@+id/total_count_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/billingItems_rv"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:fontFamily="@font/lexend_regular"
+                        android:gravity="end"
+                        android:text="2"
+                        android:textColor="@color/hintColor"
+                        android:textSize="12sp" />
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/lexend_medium"
+                android:text="Payment Details"
+                android:textColor="@color/hintColor"
+                android:textSize="12sp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/payDetails_cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="8dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="2dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/totalWeight_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:fontFamily="@font/lexend_regular"
+                            android:text="Total Weight"
+                            android:textColor="@color/hintColor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/billTotalWeight_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:fontFamily="@font/lexend_regular"
+                            android:gravity="end"
+                            android:textColor="@color/hintColor"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/billTotalWeight_tv"
+                            android:layout_marginTop="20dp"
+                            android:background="@color/colorDashEffect" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:fontFamily="@font/lexend_regular"
+                            android:text="Gross Total"
+                            android:textColor="@color/hintColor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/billGrossTotal_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:fontFamily="@font/lexend_regular"
+                            android:gravity="end"
+                            android:textColor="@color/hintColor"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/billGrossTotal_tv"
+                            android:layout_marginTop="20dp"
+                            android:background="@color/colorDashEffect" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/couponDiscount_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/billCouponKey_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:fontFamily="@font/lexend_regular"
+                            android:text="Coupon"
+                            android:textColor="@color/hintColor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/billCouponValue_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:fontFamily="@font/lexend_regular"
+                            android:gravity="end"
+                            android:textColor="@color/hintColor"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/billCouponValue_tv"
+                            android:layout_marginTop="20dp"
+                            android:background="@color/colorDashEffect" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:fontFamily="@font/lexend_regular"
+                            android:text="Coins Discount"
+                            android:textColor="@color/hintColor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/billCoins_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:fontFamily="@font/lexend_regular"
+                            android:gravity="end"
+                            android:textColor="@color/hintColor"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/billCoins_tv"
+                            android:layout_marginTop="20dp"
+                            android:background="@color/colorDashEffect" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:fontFamily="@font/lexend_regular"
+                            android:text="Delivery"
+                            android:textColor="@color/hintColor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/billDelivery_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:fontFamily="@font/lexend_regular"
+                            android:gravity="end"
+                            android:textColor="@color/hintColor"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/billDelivery_tv"
+                            android:layout_marginTop="20dp"
+                            android:background="@color/colorDashEffect" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/subscriptionRl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:fontFamily="@font/lexend_regular"
+                            android:text="Subscription"
+                            android:textColor="@color/hintColor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/billSubscription_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:fontFamily="@font/lexend_regular"
+                            android:gravity="end"
+                            android:textColor="@color/hintColor"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/billSubscription_tv"
+                            android:layout_marginTop="20dp"
+                            android:background="@color/colorDashEffect" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/billedWeight_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:fontFamily="@font/lexend_regular"
+                            android:text="Billed Weight"
+                            android:textColor="@color/hintColor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/billBilledWeight_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:fontFamily="@font/lexend_regular"
+                            android:gravity="end"
+                            android:textColor="@color/hintColor"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/billBilledWeight_tv"
+                            android:layout_marginTop="20dp"
+                            android:background="@color/colorDashEffect" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:fontFamily="@font/lexend_regular"
+                            android:text="Net Total"
+                            android:textColor="@color/hintColor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/billNetTotal_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:fontFamily="@font/lexend_regular"
+                            android:gravity="end"
+                            android:textColor="@color/hintColor"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/billNetTotal_tv"
+                            android:layout_marginTop="20dp"
+                            android:background="@color/colorDashEffect"
+                            android:visibility="invisible" />
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/billPaymentType_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/rounded_button_4px"
+                        android:backgroundTint="#1030b856"
+                        android:fontFamily="@font/lexend_light"
+                        android:paddingStart="15dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="5dp"
+                        android:textColor="#30b856"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/lexend_medium"
+                android:text="Other Details"
+                android:textColor="@color/hintColor"
+                android:textSize="12sp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/otherDetails_cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="8dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="2dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="true">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/other_root_ll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="125dp"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:background="#eef6f5"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:id="@+id/subscriptionAvailable_ll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:background="@drawable/rounded_button_4px"
+                                android:backgroundTint="#e5f0f0"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="10dp"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/subscriptionValue_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/lexend_bold"
+                                    android:text="100"
+                                    android:textColor="#50615f"
+                                    android:textSize="20sp" />
+
+                                <TextView
+                                    android:id="@+id/subscriptionUnitName_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:fontFamily="@font/lexend_regular"
+                                    android:text="Available Units"
+                                    android:textSize="12sp" />
+
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/subscriptionUnavailable_ll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/rounded_button_4px"
+                                android:backgroundTint="#e5f0f0"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="10dp"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/subscriptionUnavailable_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/lexend_regular"
+                                    android:text="Subscription not used"
+                                    android:textSize="12sp" />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/subscriptionName_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:background="@drawable/rounded_button_4px"
+                                android:backgroundTint="#e5f0f0"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/lexend_regular"
+                                android:maxLines="2"
+                                android:padding="10dp"
+                                android:text="Available Units Available Units Available Units "
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:background="#f4f2fe"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:id="@+id/couponAvailable_ll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:background="@drawable/rounded_button_4px"
+                                android:backgroundTint="#ebe9fd"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="10dp"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/couponValue_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/lexend_bold"
+                                    android:text="100"
+                                    android:textColor="#50615f"
+                                    android:textSize="20sp" />
+
+                                <TextView
+                                    android:id="@+id/couponUnitName_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:fontFamily="@font/lexend_regular"
+                                    android:textSize="12sp" />
+
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/couponUnavailable_ll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/rounded_button_4px"
+                                android:backgroundTint="#ebe9fd"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="10dp"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/couponUnavailable_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/lexend_regular"
+                                    android:text="Coupon not used"
+                                    android:textSize="12sp" />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/couponName_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:background="@drawable/rounded_button_4px"
+                                android:backgroundTint="#ebe9fd"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/lexend_regular"
+                                android:maxLines="2"
+                                android:padding="10dp"
+                                android:text="Available Units Available Units Available Units "
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:background="#d6c8d8"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:id="@+id/plusAvailable_ll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:background="@drawable/rounded_button_4px"
+                                android:backgroundTint="#ddd4de"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="10dp"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/plusValue_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/lexend_bold"
+                                    android:text="100"
+                                    android:textColor="#50615f"
+                                    android:textSize="20sp" />
+
+                                <TextView
+                                    android:id="@+id/plusUnitName_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:fontFamily="@font/lexend_regular"
+                                    android:text="Available Units"
+                                    android:textSize="12sp" />
+
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/plusUnavailable_ll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/rounded_button_4px"
+                                android:backgroundTint="#ddd4de"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="10dp"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/plusUnavailable_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/lexend_regular"
+                                    android:text="Plus not available!"
+                                    android:textSize="12sp" />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/plusName_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:background="@drawable/rounded_button_4px"
+                                android:backgroundTint="#ddd4de"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/lexend_regular"
+                                android:maxLines="2"
+                                android:padding="10dp"
+                                android:text="Available Units Available Units Available Units "
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/lexend_medium"
+                android:text="Vendor's Cut"
+                android:textColor="@color/hintColor"
+                android:textSize="12sp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/vendorCut_cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="8dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="2dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/billingTrans_option"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/billing_settlement_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:background="@drawable/rounded_button_4px"
+                            android:backgroundTint="#10ff8935"
+                            android:fontFamily="@font/lexend_regular"
+                            android:paddingStart="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="5dp"
+                            android:textColor="#ff8935"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/billing_settlement_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/rounded_button_4px"
+                            android:backgroundTint="#10ff8935"
+                            android:fontFamily="@font/lexend_regular"
+                            android:paddingStart="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="5dp"
+                            android:textColor="#ff8935"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/totalBill_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/billingTrans_option"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/lexend_regular"
+                        android:text="Total Bill"
+                        android:textColor="@color/hintColor"
+                        android:textSize="12sp" />
+
+
+                    <TextView
+                        android:id="@+id/totalBill_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/totalBill_heading"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/lexend_bold"
+                        android:textColor="@color/hintColor"
+                        android:textSize="28sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/billingUnAvailable_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/empty"
+            app:lottie_speed="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_button_4px"
+            android:backgroundTint="#1030b856"
+            android:fontFamily="@font/lexend_regular"
+            android:padding="10dp"
+            android:text="No billing details available"
+            android:textColor="@color/hintColor"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

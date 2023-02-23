@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomnav_root_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorLightBeige">
+
+    <ImageView
+        android:id="@+id/bottomnav_highlighter_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:translationX="-5dp"
+        android:translationY="20dp" />
+
+    <LinearLayout
+        android:id="@+id/bottomnav_child_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bottomnav_highlighter_iv"
+        android:background="@drawable/ic_curved_bottomnav"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivTabHome"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_home"
+                app:tint="@color/unselectedTabImage" />
+
+            <ImageView
+                android:id="@+id/ivTabMap"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_baseline_map_24"
+                app:tint="@color/unselectedTabImage" />
+
+            <ImageView
+                android:id="@+id/ivTabSearch"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_search_iocn" />
+
+            <ImageView
+                android:id="@+id/ivTabOrder"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/order_icon"
+                app:tint="@color/unselectedTabImage" />
+
+            <ImageView
+                android:id="@+id/ivTabSetting"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/setting"
+                app:tint="@color/unselectedTabImage" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvTabHome"
+                android:layout_width="0dp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexend_regular"
+                android:text="Home"
+                android:textAlignment="center"
+                android:textColor="@color/unselectedTabText"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvTabMap"
+                android:layout_width="0dp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexend_regular"
+                android:text="Map"
+                android:textAlignment="center"
+                android:textColor="@color/unselectedTabText"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvTabSearch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexend_regular"
+                android:text="Search"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:textColor="@color/unselectedTabText"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvTabOrder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexend_regular"
+                android:text="Order"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:textColor="@color/unselectedTabText"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvTabSetting"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/lexend_regular"
+                android:text="Setting"
+                android:textAlignment="center"
+                android:textColor="@color/unselectedTabText"
+                android:textSize="13sp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

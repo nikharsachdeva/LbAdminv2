@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.order.OrderAnalysisFragment">
+
+    <ImageView
+        android:id="@+id/orderAnalysisFilter_iv"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/filter" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/orderAnalysis_lc"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="300dp"
+        android:layout_below="@id/orderAnalysisFilter_iv"
+        android:layout_marginTop="10dp" />
+
+</RelativeLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightBeige"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    tools:context=".ui.order.OrdersFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/orderSearch_rl"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_toStartOf="@id/adminNotificationIcon_iv"
+            android:background="@drawable/rounded_button_10px"
+            android:backgroundTint="@color/white"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/searchIconHelp_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_search_iocn"
+                app:tint="@color/hintColor" />
+
+            <EditText
+                android:id="@+id/orderSearch_et"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/searchIconHelp_iv"
+                android:background="@null"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:digits="0123456789"
+                android:editable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/lexend_light"
+                android:hint="Order Number Here"
+                android:imeOptions="actionDone"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:textColor="@color/hintColor"
+                android:textColorHint="@color/hintColor"
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/adminNotificationIcon_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/rounded_button_10px"
+            android:padding="18dp"
+            android:src="@drawable/ic_baseline_notifications_24"
+            app:tint="@color/hintColor" />
+
+        <RelativeLayout
+            android:id="@+id/adminChartRoot_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/orderSearch_rl">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/adminChartTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorLightBeige"
+                android:clipToPadding="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                app:tabIndicatorHeight="0dp"
+                app:tabMode="scrollable"
+                app:tabPaddingEnd="10dp"
+                app:tabPaddingStart="10dp"
+                app:tabSelectedTextColor="@color/hintColor"
+                app:tabTextAppearance="@style/CustomTextAppearanceVendorTab"
+                app:tabTextColor="@color/colorHeading" />
+
+            <com.laundrybuoy.admin.utils.DynamicViewPager
+                android:id="@+id/adminChartViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="340dp"
+                android:layout_below="@id/adminChartTabLayout"
+                android:clipToPadding="false" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ordersFilters_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adminChartRoot_rl"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ordersFilters_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

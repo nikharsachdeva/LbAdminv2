@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btm_sheet_like_shape"
+        android:backgroundTint="@color/btm_sheet_bg"
+        android:paddingBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/closeSettlement_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_baseline_close_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/colorBgSandesh" />
+
+        <TextView
+            android:id="@+id/settlementHeading_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/lexend_regular"
+            android:lineSpacingExtra="10sp"
+            android:text="Enter OTP"
+            android:textColor="@color/colorBgSandesh"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/closeSettlement_iv" />
+
+        <EditText
+            android:id="@+id/settlementAmt_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bg_add_sandesh_round"
+            android:enabled="false"
+            android:fontFamily="@font/lexend_medium"
+            android:gravity="center_horizontal"
+            android:hint="000000"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:letterSpacing="0.03"
+            android:lineSpacingExtra="34sp"
+            android:paddingStart="20dp"
+            android:paddingTop="14dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="14dp"
+            android:text="2233.33"
+            android:textColor="@color/white"
+            android:textColorHint="@color/lightHintColor"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settlementHeading_tv" />
+
+        <EditText
+            android:id="@+id/settlementDesc_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bg_add_sandesh_round"
+            android:fontFamily="@font/lexend_light"
+            android:gravity="start"
+            android:hint="write description for claim"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:letterSpacing="0.03"
+            android:lineSpacingExtra="34sp"
+            android:lines="2"
+            android:paddingStart="20dp"
+            android:paddingTop="14dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="14dp"
+            android:text="Hi making this as settled"
+            android:textColor="@color/white"
+            android:textColorHint="@color/lightHintColor"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settlementAmt_et" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/settlementSubmit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/rounded_button_8px"
+            android:fontFamily="@font/lexend_medium"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:backgroundTint="@color/colorBlueBtn"
+            app:icon="@drawable/ic_tick_circle"
+            app:iconGravity="textStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settlementDesc_et" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

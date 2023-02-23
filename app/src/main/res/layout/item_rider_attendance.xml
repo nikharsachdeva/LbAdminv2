@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/row_item_attendance_ll"
+    android:layout_width="45dp"
+    android:layout_height="45dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="5dp"
+    android:background="@drawable/circle_shape_bg"
+    android:backgroundTint="#f0f4fa">
+
+    <TextView
+        android:id="@+id/row_item_attendance_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/lexend_regular"
+        android:text="M"
+        android:textSize="14sp" />
+
+</RelativeLayout>

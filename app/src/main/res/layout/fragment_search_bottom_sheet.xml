@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_bottom_sheet_round"
+    android:backgroundTint="@color/white"
+    android:layoutAnimation="@anim/layout_animation_fade_enter"
+    android:padding="20dp"
+    tools:context=".ui.SearchBottomSheetFragment">
+
+    <ImageView
+        android:id="@+id/backFromSearch_iv"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_keyboard_arrow_left_black_24dp" />
+
+    <RelativeLayout
+        android:id="@+id/orderSearch_rl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/backFromSearch_iv"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_button_10px"
+        android:backgroundTint="@color/color_calorie_bg"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/searchIconHelp_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_search_iocn"
+            app:tint="@color/hintColor" />
+
+        <EditText
+            android:id="@+id/orderSearch_et"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@id/searchIconHelp_iv"
+            android:background="@null"
+            android:fontFamily="@font/lexend_light"
+            android:hint="Order Number Here"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/hintColor"
+            android:textColorHint="@color/hintColor"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/orderSearch_rl"
+        android:layout_marginTop="20dp" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/searchShimmer_sl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/orderSearch_rl"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:shimmer_auto_start="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/placeholder_search" />
+
+            <include layout="@layout/placeholder_search" />
+
+            <include layout="@layout/placeholder_search" />
+
+            <include layout="@layout/placeholder_search" />
+
+            <include layout="@layout/placeholder_search" />
+
+            <include layout="@layout/placeholder_search" />
+
+            <include layout="@layout/placeholder_search" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</RelativeLayout>

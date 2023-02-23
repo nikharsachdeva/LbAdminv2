@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".ui.vendor.VendorTransactionFigFragment">
+
+    <ImageView
+        android:id="@+id/close_filterFig_iv"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_baseline_close_24" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/close_filterFig_iv"
+        android:layout_marginTop="20dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/total_amount_rl"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:background="@drawable/selector_home_filter"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/total_amount_value_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexend_medium"
+                    android:textColor="@color/hintColor"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/total_amount_value_tv"
+                    android:fontFamily="@font/lexend_regular"
+                    android:text="Total amount"
+                    android:textColor="@color/hintColor"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/total_order_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/total_order_heading"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/lexend_medium"
+                    android:textColor="@color/hintColor"
+                    android:textSize="28dp" />
+
+                <TextView
+                    android:id="@+id/total_order_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:fontFamily="@font/lexend_regular"
+                    android:text="Total orders"
+                    android:textColor="@color/hintColor"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/settled_amount_rl"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/selector_home_filter"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/settled_amount_value_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexend_medium"
+                    android:textColor="@color/hintColor"
+                    android:textSize="28dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/settled_amount_value_tv"
+                    android:fontFamily="@font/lexend_regular"
+                    android:text="Settled amount"
+                    android:textColor="@color/hintColor"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/settled_order_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/settled_order_heading"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/lexend_medium"
+                    android:textColor="@color/hintColor"
+                    android:textSize="28dp" />
+
+                <TextView
+                    android:id="@+id/settled_order_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:fontFamily="@font/lexend_regular"
+                    android:text="Settled orders"
+                    android:textColor="@color/hintColor"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/unsettled_amount_rl"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/selector_home_filter"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/unsettled_amount_value_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexend_medium"
+                    android:textColor="@color/hintColor"
+                    android:textSize="28dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/unsettled_amount_value_tv"
+                    android:fontFamily="@font/lexend_regular"
+                    android:text="Unsettled amount"
+                    android:textColor="@color/hintColor"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/unsettled_order_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/unsettled_order_heading"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/lexend_medium"
+                    android:textColor="@color/hintColor"
+                    android:textSize="28dp" />
+
+                <TextView
+                    android:id="@+id/unsettled_order_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:fontFamily="@font/lexend_regular"
+                    android:text="Unsettled orders"
+                    android:textColor="@color/hintColor"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</RelativeLayout>

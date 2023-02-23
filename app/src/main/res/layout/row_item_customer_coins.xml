@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coin_transaction_root_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:id="@+id/coin_transaction_ivRl"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_baseline_circle_24"
+        android:backgroundTint="#3a70ea">
+
+        <ImageView
+            android:id="@+id/coin_transaction_iv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_baseline_notifications_24"
+            app:tint="@color/white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/coin_transaction_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@id/coin_transaction_ivRl"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/coin_transaction_heading_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lexend_medium"
+            android:text="Hahahahha"
+            android:textColor="@color/hintColor"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/coin_transaction_subhead_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/coin_transaction_heading_tv"
+            android:layout_marginTop="5dp"
+            android:alpha="0.7"
+            android:fontFamily="@font/lexend_regular"
+            android:text="Hahahahha"
+            android:textColor="@color/colorHorizontalLine"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/coin_transaction_value_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/rounded_bg_4px"
+            android:backgroundTint="#1030b856"
+            android:fontFamily="@font/lexend_regular"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            android:text="+100"
+            android:textColor="#30b856"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/coin_closing_bal_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/coin_transaction_value_tv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:alpha="0.7"
+            android:fontFamily="@font/lexend_regular"
+            android:text="Coins closing balance : 200"
+            android:textColor="@color/colorHorizontalLine"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="0dp"
+    android:insetTop="0dp"
+    android:insetRight="0dp"
+    android:insetBottom="0dp">
+    <shape>
+        <solid android:color="@color/btm_sheet_bg" />
+        <corners android:topLeftRadius="16dp"
+            android:topRightRadius="16dp"/>
+    </shape>
+</inset>

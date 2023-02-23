@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="pinkMusicTabText">#FF81A9</color>
+    <color name="primaryLight">#edb336</color>
+    <color name="secondary">#35291d</color>
+    <color name="secondaryLight">#5e3f22</color>
+    <color name="greeting_tooltip_color">#1AFFFFFF</color>
+    <color name="colorGradientHeadings">#9B9FAA</color>
+    <color name="unselectedTabText">#6B6D92</color>
+
+    <color name="colorRed">#cc252c</color>
+
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#a4d9ed</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="colorBg">#f0eff4</color>
+
+    <color name="unselectedTabImage">#6B6D92</color>
+    <color name="btm_sheet_bg">#161829</color>
+    <color name="colorBlueBtn">#3843D0</color>
+    <color name="profileHeading">#8da0bb</color>
+
+    <color name="pinkMusicTabImage">#80FF81A9</color>
+    <color name="color_calorie_bg">#1AFF7E59</color>
+    <color name="color_distance_bg">#1A8FA1FF</color>
+
+    <color name="colorHorizontalLine">#1B2233</color>
+    <color name="blueTrackerTabText">#8FA1FF</color>
+    <color name="colorBtmSht_text">#C6D0E8</color>
+
+
+    <color name="colorPurpleBackground">#28243D</color>
+    <color name="colorPurpleForeground">#312D4B</color>
+    <color name="colorDarkGrey">#d5dade</color>
+    <color name="hintColor">#31394C</color>
+    <color name="hintColorDark">#8031394C</color>
+    <color name="colorPurpleLight">#9155FD</color>
+    <color name="purple20">#20561fff</color>
+    <color name="purple80">#80561fff</color>
+    <color name="blue20">#2000b7fd</color>
+    <color name="purple100">#561fff</color>
+    <color name="blue50">#5000b7fd</color>
+    <color name="colorError">#d1001f</color>
+    <color name="colorSuccess">#3CB943</color>
+
+    <color name="blue100">#00b7fd</color>
+
+    <color name="colorPlaceholder">#dddddd</color>
+    <color name="primary">#edb361</color>
+    <color name="colorHeading">#8d96b5</color>
+    <color name="colorLightBeige">#fef7f0</color>
+    <color name="lightHintColor">#3C8F92BF</color>
+    <color name="colorDashEffect">#cad5e1</color>
+
+    <color name="pastelGreen">#4da376</color>
+    <color name="colorBgSandesh">#f4f8fb</color>
+
+    <color name="colorBlueChart">#6a9ae0</color>
+    <color name="colorYellowChart">#efcea0</color>
+
+
+    <color name="colorBlueHighlight">#005eff</color>
+    <color name="colorBlueNew">#3d59f1</color>
+    <color name="colorBlueDark">#222a41</color>
+    <color name="colorCouponBg">#f4f6fb</color>
+    <color name="lightBg">#f9f9f9</color>
+
+
+</resources>

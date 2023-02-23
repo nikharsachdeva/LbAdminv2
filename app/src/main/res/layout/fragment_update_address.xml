@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/updateWorkSpace_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#14191f"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".ui.vendor.UpdateAddressFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/close_update_workspace_iv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/arrow_back_ios_24"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/workspace_heading_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/close_update_workspace_iv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/lexend_regular"
+            android:text="Update workspace address"
+            android:textColor="#8da0bb"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:id="@+id/autocomplete_fragment_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/workspace_heading_tv"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_button_10px"
+            android:backgroundTint="#202933">
+
+            <fragment
+                android:id="@+id/autocomplete_fragment"
+                android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/workSpaceMap_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="true"
+            android:layout_marginBottom="130dp"
+            android:layout_below="@id/autocomplete_fragment_rl"
+            android:layout_marginTop="20dp">
+
+            <fragment
+                android:id="@+id/workSpaceAddress_map"
+                class="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/mapMarker_iv"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_baseline_edit_location_24"
+                android:visibility="gone"
+                app:tint="#ff8935" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/updateWorkAddress_btmsht"
+        layout="@layout/fragment_update_workaddress" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

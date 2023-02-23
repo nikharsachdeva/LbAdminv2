@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+
+    <TextView
+        android:id="@+id/row_item_breakup_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@id/row_item_breakup_score"
+        android:ellipsize="end"
+        android:fontFamily="@font/lexend_medium"
+        android:maxLines="1"
+        android:text="Orders Breakup"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/row_item_breakup_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/lexend_medium"
+        android:text="204/420"
+        android:textColor="@color/colorBtmSht_text"
+        android:textSize="12sp" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/row_item_breakup_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/row_item_breakup_title"
+        android:layout_marginTop="10dp"
+        app:trackCornerRadius="4dp"
+        app:trackThickness="10dp" />
+
+</RelativeLayout>

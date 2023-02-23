@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    app:cardBackgroundColor="@color/colorLightBeige"
+    android:elevation="5dp"
+    app:cardCornerRadius="12dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/packageActiveSts_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/rounded_button_10px"
+            android:backgroundTint="#1030b856"
+            android:fontFamily="@font/lexend_regular"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            android:text="Active"
+            android:textColor="#30b856"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/packageName_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/packageActiveSts_tv"
+            android:fontFamily="@font/lexend_bold"
+            android:text="Freedom 30"
+            android:textColor="@color/hintColor"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/packageDesc_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/packageName_tv"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/lexend_regular"
+            android:text="No delivery charge applicable for 1 month"
+            android:textColor="@color/colorHeading"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/packagePrice_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/packageDesc_tv"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/lexend_bold"
+            android:text="₹500"
+            android:textColor="@color/hintColor"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/packageValidity_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/packagePrice_tv"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/lexend_regular"
+            android:text="/30 days"
+            android:textColor="@color/colorHeading"
+            android:textSize="14sp" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/packagePoints_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/editPackage_btn"
+            android:layout_below="@id/packageValidity_tv"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_item_package_point" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/editPackage_btn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_button_8px"
+            android:fontFamily="@font/lexend_medium"
+            android:text="Enable"
+            android:textAllCaps="false"
+            app:iconSize="18dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:backgroundTint="@color/colorBlueBtn"
+            app:icon="@drawable/ic_tick_circle"
+            app:iconGravity="textStart" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

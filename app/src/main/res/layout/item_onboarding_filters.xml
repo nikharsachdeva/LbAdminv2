@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_filer_name_rl"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="10dp"
+    android:padding="2dp">
+
+    <TextView
+        android:id="@+id/item_filer_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_bg_4px"
+        android:fontFamily="@font/lexend_medium"
+        android:padding="15dp"
+        android:text="Pending Approvals"
+        android:textColor="@color/hintColor"
+        android:textSize="14sp" />
+
+</RelativeLayout>
+

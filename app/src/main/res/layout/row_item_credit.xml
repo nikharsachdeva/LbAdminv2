@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="75dp">
+
+        <RelativeLayout
+            android:id="@+id/transactionCredit_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/player_bg_item_border_unselected"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/transactionFor_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/rounded_button_4px"
+                android:backgroundTint="@color/primary"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/transactionFor_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/lexend_regular"
+                    android:maxLines="1"
+                    android:textColor="@color/hintColor"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/transactionDetail_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/transactionFor_rl"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:id="@+id/transactionArrow_iv"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/arrow_upward_24"
+                        app:tint="@color/colorRed" />
+
+                    <TextView
+                        android:id="@+id/transactionAmt_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/transactionArrow_iv"
+                        android:fontFamily="@font/lexend_bold"
+                        android:text="25,000"
+                        android:textColor="@color/hintColor"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/transactionTime_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/transactionAmt_tv"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/transactionArrow_iv"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/lexend_regular"
+                        android:maxLines="1"
+                        android:text="01:45PM"
+                        android:textColor="@color/hintColor"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/transactionCategory_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/rounded_button_4px"
+                        android:backgroundTint="#10ff8935"
+                        android:fontFamily="@font/lexend_regular"
+                        android:paddingStart="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="5dp"
+                        android:text="Personal"
+                        android:textColor="#ff8935"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/transactionStatus_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/rounded_button_4px"
+                        android:backgroundTint="#1000b7fd"
+                        android:fontFamily="@font/lexend_regular"
+                        android:paddingStart="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="5dp"
+                        android:text="Approved"
+                        android:textColor="#00b7fd"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/transactionDotted_v"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@id/transactionDetail_rl"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/dashed_line" />
+
+            <TextView
+                android:id="@+id/transactionDesc_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/transactionDotted_v"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/lexend_regular"
+                android:maxLines="2"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+                android:textColor="@color/hintColor"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <View
+                android:id="@+id/claimDotted_v"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@id/transactionDesc_tv"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/dashed_line"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/claimActions_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/claimDotted_v"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rejectClaim_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_button_4px"
+                    android:fontFamily="@font/lexend_light"
+                    android:text="Reject"
+                    android:textAllCaps="false"
+                    android:textColor="#fc2254"
+                    android:textSize="12sp"
+                    app:backgroundTint="#10fc2254" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/approveClaim_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_button_4px"
+                    android:fontFamily="@font/lexend_light"
+                    android:text="Accept"
+                    android:textAllCaps="false"
+                    android:textColor="#30b856"
+                    android:textSize="12sp"
+                    app:backgroundTint="#1030b856" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/transactionCurrentBal_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/transactionCredit_rl"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/lexend_regular"
+            android:text="500"
+            android:textColor="@color/hintColor"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+</layout>

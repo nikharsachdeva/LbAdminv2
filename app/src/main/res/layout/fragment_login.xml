@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPurpleBackground"
+    android:padding="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.LoginFragment">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardBackgroundColor="@color/colorPurpleForeground"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="8dp"
+        app:cardMaxElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/splash_icon_admin" />
+
+            <RelativeLayout
+                android:id="@+id/whatsapp_number_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_add_sandesh_round"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/countryCodeWhatsapp_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="12dp"
+                    android:fontFamily="@font/lexend_medium"
+                    android:text="+91"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textSize="20sp" />
+
+                <View
+                    android:id="@+id/dividerWhatsapp_v"
+                    android:layout_width="1dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toEndOf="@id/countryCodeWhatsapp_tv"
+                    android:background="@color/colorDarkGrey" />
+
+                <EditText
+                    android:id="@+id/enterPhoneWhatsapp_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="12dp"
+                    android:text="917599439162"
+                    android:layout_toEndOf="@id/dividerWhatsapp_v"
+                    android:background="@null"
+                    android:digits="0123456789"
+                    android:fontFamily="@font/lexend_medium"
+                    android:gravity="center"
+                    android:hint="8899008910"
+                    android:imeOptions="actionDone"
+                    android:inputType="phone"
+                    android:letterSpacing="0.1"
+                    android:maxLength="12"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/colorDarkGrey"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submit_whatsapp_number_btn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:alpha="0.7"
+                android:background="@drawable/rounded_button_8px"
+                android:enabled="false"
+                android:fontFamily="@font/lexend_medium"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:backgroundTint="@color/colorPurpleLight"
+                app:icon="@drawable/ic_tick_circle"
+                app:iconGravity="textStart" />
+
+            <RelativeLayout
+                android:id="@+id/otp_number_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_add_sandesh_round"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/enterOtpWhatsapp_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:digits="0123456789"
+                    android:fontFamily="@font/lexend_medium"
+                    android:gravity="center"
+                    android:hint="000000"
+                    android:imeOptions="actionDone"
+                    android:inputType="phone"
+                    android:letterSpacing="0.1"
+                    android:maxLength="6"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/colorDarkGrey"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submit_otp_btn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:alpha="0.7"
+                android:background="@drawable/rounded_button_8px"
+                android:enabled="false"
+                android:fontFamily="@font/lexend_medium"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:backgroundTint="@color/colorPurpleLight"
+                app:icon="@drawable/ic_tick_circle"
+                app:iconGravity="textStart" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

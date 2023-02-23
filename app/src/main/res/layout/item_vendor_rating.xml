@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+
+    <TextView
+        android:id="@+id/vendorRatingType_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lexend_regular"
+        android:text="5 stars"
+        android:textColor="@color/colorHeading"
+        android:textSize="12sp" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/vendorRating_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toStartOf="@id/vendorRatingPercent_tv"
+        android:layout_toEndOf="@id/vendorRatingType_tv"
+        android:progress="50"
+        app:indicatorColor="#ffc107"
+        app:trackColor="@color/colorPlaceholder"
+        app:trackCornerRadius="8dp"
+        app:trackThickness="12dp" />
+
+    <TextView
+        android:id="@+id/vendorRatingPercent_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="@font/lexend_regular"
+        android:text="80%"
+        android:textColor="@color/colorHeading"
+        android:textSize="12sp" />
+
+</RelativeLayout>

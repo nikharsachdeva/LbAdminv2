@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:elevation="8dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="2dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:id="@+id/row_item_vendor_clickable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/vendorServiceTags_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_order_tags" />
+
+        <RelativeLayout
+            android:id="@+id/vendorBasic_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vendorServiceTags_rv"
+            android:layout_marginTop="10dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/item_vendor_cname_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@id/item_vendor_date_tv"
+                android:fontFamily="@font/lexend_regular"
+                android:text="Nikhar Sachdeva"
+                android:textColor="@color/hintColor"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/item_vendor_address_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_vendor_cname_tv"
+                android:fontFamily="@font/lexend_regular"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500"
+                android:textColor="@color/colorHeading"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/item_vendor_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/lexend_regular"
+                android:text="31 Dec 2022 07:44 PM"
+                android:textColor="@color/colorHeading"
+                android:textSize="11sp"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/vendorList_divider"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@id/vendorBasic_rl"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layerType="software"
+            android:src="@drawable/dashed_line" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/vendorPinTags_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vendorList_divider"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_order_tags" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/assignVendor_btn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/vendorPinTags_rv"
+            android:background="@drawable/rounded_button_8px"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/lexend_medium"
+            android:text="Assign"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:backgroundTint="@color/colorBlueBtn"
+            app:icon="@drawable/ic_tick_circle"
+            app:iconGravity="textStart" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+

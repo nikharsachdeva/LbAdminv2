@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="isStatusSelected"
+            type="Boolean" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/row_item_status_container_cv"
+        isSelected="@{isStatusSelected}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_schedule_date"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/row_item_status_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/lexend_regular"
+            android:text="Service Name Here"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</layout>

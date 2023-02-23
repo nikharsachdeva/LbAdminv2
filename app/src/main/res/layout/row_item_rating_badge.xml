@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="isSelected"
+            type="Boolean" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/rating_badge_rl"
+            isSelected="@{isSelected}"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/selector_circle_border">
+
+            <ImageView
+                android:id="@+id/item_badge_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/circle_shape_bg"
+                android:backgroundTint="#f8f8f8"
+                android:src="@drawable/order_icon"
+                app:tint="#6e6d7e" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/item_badge_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rating_badge_rl"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/lexend_light"
+            android:text="Packaging"
+            android:textAlignment="center"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</layout>

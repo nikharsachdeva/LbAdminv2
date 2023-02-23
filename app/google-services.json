@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "208252478427",
+    "project_id": "lbadminv2",
+    "storage_bucket": "lbadminv2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:208252478427:android:3919040d080608d8bc7dfe",
+        "android_client_info": {
+          "package_name": "com.laundrybuoy.admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "208252478427-q0q34qem2n5p4lqu073f4corp0ai1m0b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.laundrybuoy.admin",
+            "certificate_hash": "7f84fcbc22f7f1663f83ebf2fbbd4f16b4a12519"
+          }
+        },
+        {
+          "client_id": "208252478427-t5g5vkdtgq1ehabq0c3ce9b2for1m578.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAv335O4xDJKNFOasG82bAI63AadV8KrZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "208252478427-t5g5vkdtgq1ehabq0c3ce9b2for1m578.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

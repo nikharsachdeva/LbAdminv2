@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp"
+    tools:context=".ui.order.ViewNoteConcernFragment">
+
+    <ImageView
+        android:id="@+id/closeView_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_baseline_close_24" />
+
+    <TextView
+        android:id="@+id/viewHeading_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/closeView_iv"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/lexend_medium"
+        android:text="Title goes here"
+        android:textColor="@color/hintColor"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/viewDescription_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewHeading_tv"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/lexend_regular"
+        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        android:textColor="@color/hintColor"
+        android:textSize="14sp" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpagerImages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/indicatorImages"
+        android:layout_below="@id/viewDescription_tv"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp" />
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/indicatorImages"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:elevation="4dp"
+        app:ci_drawable="@drawable/selected_indicator"
+        app:ci_drawable_unselected="@drawable/unselected_indicator"
+        app:ci_orientation="horizontal" />
+</RelativeLayout>

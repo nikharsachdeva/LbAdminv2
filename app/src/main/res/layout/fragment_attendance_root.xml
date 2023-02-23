@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".ui.rider.attendance.AttendanceRootFragment">
+
+    <ImageView
+        android:id="@+id/backFromMarkAtt_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_baseline_close_24"
+        app:tint="@color/hintColor" />
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/attendanceRootTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_below="@id/backFromMarkAtt_iv"
+        android:layout_marginTop="20dp"
+        android:clipToPadding="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="scrollable"
+        app:tabPaddingEnd="10dp"
+        app:tabPaddingStart="10dp"
+        app:tabSelectedTextColor="@color/hintColor"
+        app:tabTextAppearance="@style/CustomTextAppearanceVendorTab"
+        app:tabTextColor="@color/colorHeading" />
+
+    <com.laundrybuoy.admin.utils.DynamicViewPager
+        android:id="@+id/attendanceRootViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/attendanceRootTabLayout"
+        android:clipToPadding="false" />
+
+
+</RelativeLayout>

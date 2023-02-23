@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.vendor.VendorRootFragment">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/vendorRootTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="20dp"
+        android:clipToPadding="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="scrollable"
+        app:tabPaddingEnd="10dp"
+        app:tabPaddingStart="10dp"
+        app:tabSelectedTextColor="@color/hintColor"
+        app:tabTextAppearance="@style/CustomTextAppearanceVendorTab"
+        app:tabTextColor="@color/colorHeading" />
+
+    <com.laundrybuoy.admin.utils.DynamicViewPager
+        android:id="@+id/vendorRootViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/vendorRootTabLayout"
+        android:clipToPadding="false" />
+
+</RelativeLayout>

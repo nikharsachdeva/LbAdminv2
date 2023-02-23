@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/btm_sheet_like_shape"
+    android:backgroundTint="#202933"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".ui.vendor.VendorUpdateFragment">
+
+    <ImageView
+        android:id="@+id/close_update_profile_iv"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="end"
+        android:src="@drawable/ic_baseline_close_24"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/update_profile_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/lexend_regular"
+        android:textColor="#8da0bb"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:id="@+id/update_alt_number_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_button_8px"
+        android:backgroundTint="@color/hintColor"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/countryCodeWhatsapp_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/lexend_medium"
+            android:text="+91"
+            android:textColor="@color/colorDarkGrey"
+            android:textSize="26sp" />
+
+        <View
+            android:id="@+id/dividerWhatsapp_v"
+            android:layout_width="1dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toEndOf="@id/countryCodeWhatsapp_tv"
+            android:background="@color/colorBgSandesh" />
+
+        <EditText
+            android:id="@+id/enterNumber_et"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:layout_toEndOf="@id/dividerWhatsapp_v"
+            android:background="@null"
+            android:digits="0123456789"
+            android:fontFamily="@font/lexend_medium"
+            android:gravity="center"
+            android:hint="0000000000"
+            android:imeOptions="actionDone"
+            android:inputType="phone"
+            android:letterSpacing="0.1"
+            android:maxLength="12"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textColorHint="@color/lightHintColor"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/update_name_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_button_8px"
+        android:backgroundTint="@color/hintColor"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/enterName_et"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:background="@null"
+            android:fontFamily="@font/lexend_medium"
+            android:gravity="center"
+            android:hint="Nikhar Sachdeva"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:letterSpacing="0.1"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textColorHint="@color/lightHintColor"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/update_pincode_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button_8px"
+            android:backgroundTint="@color/hintColor"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/enterPincode_et"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp"
+                android:background="@null"
+                android:digits="0123456789"
+                android:fontFamily="@font/lexend_medium"
+                android:gravity="center"
+                android:hint="201206"
+                android:imeOptions="actionDone"
+                android:inputType="phone"
+                android:letterSpacing="0.1"
+                android:maxLength="6"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textColorHint="@color/lightHintColor"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupPincode_cg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/updateServices_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:visibility="gone">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/updateServices_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/updateProfile_btn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_button_8px"
+        android:fontFamily="@font/lexend_medium"
+        android:text="Update"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:backgroundTint="@color/colorBlueBtn"
+        app:icon="@drawable/ic_tick_circle"
+        app:iconGravity="textStart" />
+
+</LinearLayout>

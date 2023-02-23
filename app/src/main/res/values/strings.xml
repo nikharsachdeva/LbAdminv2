@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LB Admin</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="GMap_API_Key">AIzaSyBO5AURfgL5FYQJAEgerFFbGkiXEeZqRMc</string>
+    <!--    <string name="GMap_API_Key">AIzaSyBmfZUlMUKrIS-MFKY16Iu922FMXT-aSGY</string>-->
+
+</resources>

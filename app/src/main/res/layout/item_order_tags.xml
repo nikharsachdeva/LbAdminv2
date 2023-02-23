@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="isSelected"
+            type="Boolean" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/row_item_all_filter_rl"
+        isSelected="@{isSelected}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/selector_schedule_date">
+
+        <TextView
+            android:id="@+id/itemOrderTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:background="@drawable/rounded_button_4px"
+            android:backgroundTint="#1000b7fd"
+            android:fontFamily="@font/lexend_light"
+            android:paddingStart="15dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="10dp"
+            android:textColor="#00b7fd"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+
+</layout>
