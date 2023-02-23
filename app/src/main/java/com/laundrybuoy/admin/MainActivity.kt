@@ -23,6 +23,7 @@ import java.util.*
 @AndroidEntryPoint
 class MainActivity : ParentActivity(), View.OnClickListener {
 
+    //Ritvi
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
